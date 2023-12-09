@@ -18,6 +18,7 @@
     "test": "jest",
     "lint": "eslint .",
     "test:watch": "jest --watch",
+    "test:ci": "jest --ci",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
   }
 }

@@ -6,11 +6,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - run: corepack enable
+      - uses: actions/checkout@v4
       - name: Test using Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: 18
+          cache: 'yarn'
       - run: yarn install
       - run: yarn test:ci
 
